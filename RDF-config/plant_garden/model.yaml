@@ -1,0 +1,502 @@
+# http://plantgarden.jp/resource/species
+- Species pg_resource:t3712:
+  - a: obo:NCBITaxon_3712
+  - a: obo:PO_0000003   # whole plant
+  - a: pg_ns:Species
+  - pg_ns:family_name:
+    - species_familyname: '"アブラナ科"@ja'   # "Brassicaceae"@en
+  - rdfs:label:
+    - species_label: "Brassica oleracea"
+  - pg_ns:genus_name:
+    - species_genusname: '"アブラナ属"@ja'   # "Brassica"@en
+  - pg_ns:common_name:
+    - species_commonname: '"ヤセイカンラン, キャベツ, チリメンキャベツ, ブロッコリー, ケール, チャイニーズケール"@ja'   # '"Wild cabbage, Cabbage, Savoy cabbage, Broccoli, Kale"@en'
+  - pg_ns:scientific_name:
+    - species_scientificname: "Brassica oleracea"
+  - dcterms:identifier:
+    - species_identifier: "t3712"
+  - rdfs:seeAlso:
+    - species_seealso: <https://plantgarden.jp/ja/list/t3712>   # <https://plantgarden.jp/en/list/t3712>
+
+# http://plantgarden.jp/resource/subspecies
+- Subspecies pg_resource:t1000413.S001:
+  - a: pg_ns:Subspecies
+  - rdfs:label:
+    - subspecies_label: '"カエデ"@ja'   # "Chinese Maple"@en
+  - dcterms:identifier:
+    - subspecies_identifier: "t1000413.S001"
+  - rdfs:seeAlso: 
+    - subspecies_seealso: <https://plantgarden.jp/ja/list/t1000413>   # <https://plantgarden.jp/en/list/t1000413>
+  - pg_ns:species:
+    - subspecies_species: Species
+  - pg_ns:species_id:
+    - subspecies_species_id: "t1000413"
+  - pg_ns:species_name:
+    - subspecies_species_name: "Acer yangbiense"
+  - pg_ns:sub_name:
+    - subspecies_sub_name: ""
+  - pg_ns:sub_rank:
+    - subspecies_sub_rank: ""
+  
+# http://plantgarden.jp/resource/genome
+- Genome pg_resource:t1000413.G001:
+  - a: pg_ns:Genome
+  - rdfs:label:
+    - genome_label: "AYv1.1"
+  - rdfs:seeAlso:
+    - genome_seealso: <https://plantgarden.jp/ja/list/t1000413/genome/t1000413.G001>   # <https://plantgarden.jp/en/list/t1000413/genome/t1000413.G001>
+  - pg_ns:assembly_count:
+    - genome_assembly_count: "280"
+  - pg_ns:assembly_level:
+    - genome_assembly_level: "Chromosome"
+  - pg_ns:assembly_method:
+    - genome_assembly_method: "SMARTDENOVO v. 1.0"
+  - pg_ns:assembly_size:
+    - genome_assembly_size: "665887899 "
+  - pg_ns:assembly_version:
+    - genome_assembly_version: "AYv1.1"
+  - pg_ns:biological_sample_name:
+    - genome_biological_sample_name: "ecotype Malutang"
+  - pg_ns:chromosome_count:
+    - genome_chromosome_count: "2n=26"
+  - pg_ns:data_source_name:
+    - genome_data_source_name: "GIGA DB"
+  - pg_ns:data_source_url:
+    - genome_data_source_url: "http://gigadb.org/"
+  - pg_ns:estimated_genome_size:
+    - genome_estimated_genome_size: "640"
+  - pg_ns:f_active:
+    - genome_f_active: "1"
+  - pg_ns:genome_assembly_id:
+    - genome_genome_assembly_id: "t1000413.G001"
+  - pg_ns:other_comments:
+    - genome_other_comments: ""
+  - pg_ns:pgid:
+    - genome_pgid: "t1000413.S001"
+  - pg_ns:reference_doi:
+    - genome_reference_doi: "10.1093/gigascience/giz085"
+  - pg_ns:scaffold_N50:
+    - genome_scaffold_n50: "44917698"
+  - pg_ns:sequencing_depth:
+    - genome_sequencing_depth: "100x"
+  - pg_ns:sequencing_method:
+    - genome_sequencing_method: "PacBio, Sequel"
+  - pg_ns:sequencing_method_comments:
+    - genome_sequencing_method_comments: "Tree species endemic to China"
+  - pg_ns:submitter:
+    - genome_submitter: "Yongpeng Ma (Chinese Academy of Sciences), Weibang Sun (ditto)"
+  - pg_ns:subspecies:
+    - genome_subspecies: Subspecies
+  - dcterms:identifier:
+    - genome_identifier: "t1000413.G001"
+  - pg_ns:species:
+    - genome_species: Species
+  - pg_ns:species_id:
+    - genome_species_id: "t1000413"
+  
+# http://plantgarden.jp/resource/pg_marker
+- Marker pg_resource:t3625.M000001.1:
+  - a: obo:SO_0000207   # simple_sequence_length_variation
+  - a: pg_ns:Marker
+  - rdfs:label:
+    - marker_label: "Ke115"
+  - rdfs:seeAlso:
+    - marker_seealso: <https://plantgarden.jp/ja/list/t3625/marker/t3625.M000001.1>   # <https://plantgarden.jp/en/list/t3625/marker/t3625.M000001.1>
+  - pg_ns:f_active:
+    - marker_f_active: "1"
+  - dcterms:references:
+    - marker_references: "15067386"
+  - pg_ns:allele:
+    - marker_allele: "NA"
+  - pg_ns:chr:
+    - marker_chr: "NA"
+  - pg_ns:doi:
+    - marker_doi: "10.1007/s00122-003-1517-4"
+  - pg_ns:enzyme:
+    - marker_enzyme: "NA"
+  - pg_ns:genome:
+    - marker_genome: Genome   # <http://plantgarden.jp/resource/NA>
+  - pg_ns:mapped_genome_id:
+    - marker_mapped_genome_id: "NA"
+  - pg_ns:marker_type:
+    - marker_marker_type: "SSR"
+  - pg_ns:reference_seq_name:
+    - marker_reference_seq_name: "NA"
+  - pg_ns:sub_number:
+    - marker_sub_number: 1
+  - pg_ns:target_seq:
+    - marker_target_seq: ""
+  - dcterms:identifier:
+    - marker_identifier: "t3625.M000001.1"
+  - pg_ns:species:
+    - marker_species: Species
+  - pg_ns:species_id:
+    - marker_species_id: "t3625"
+
+- ForwordPrimer <http://plantgarden.jp/resource/t3625.M000005.1#forword-primer>:
+  - a: obo:SO_0000121
+  - rdfs:label:
+    - forwordprimer_label: "t3625.M000005.1#forword-primer"
+  - faldo:location:
+    - forwordprimer_location:
+      - []:
+        - a: faldo:Region
+        - faldo:begin:
+          - []:
+            - a: faldo:ExactPosition
+            - a: faldo:ForwardStrandPosition
+            - faldo:position:
+              - forwordprimer_begin_position: 13141818
+            - faldo:reference:
+              - forwordprimer_begin_reference: <https://plantgarden.jp/en/list/t3625/sequence/LG21>
+      - faldo:end:
+        - []:
+          - a: faldo:ExactPosition
+          - a: faldo:ForwardStrandPosition
+          - faldo:position:
+            - forwordprimer_end_position: 13141837
+          - faldo:reference:
+            - forwordprimer_end_reference: <https://plantgarden.jp/en/list/t3625/sequence/LG21>
+  - pg_ns:sequence:
+    - forwordprimer_sequence: "GTTTCCCACTCTGCAAAAGC"
+  
+- ReversePrimer <http://plantgarden.jp/resource/t3625.M000002.1#reverse-primer>:
+  - a: obo:SO_0000132
+  - rdfs:label:
+    - reverseprimer_label: "t3625.M000002.1#reverse-primer"
+  - faldo:location:
+    - reverseprimer_location:
+      - []:
+        - a: faldo:Region
+        - faldo:begin:
+          - []:
+            - a: faldo:ExactPosition
+            - a: faldo:ForwardStrandPosition
+            - faldo:position:
+              - reverseprimer_begin_position: 5420833
+            - faldo:reference:
+              - reverseprimer_begin_reference: <https://plantgarden.jp/en/list/t3625/sequence/LG23>
+        - faldo:end:
+          - []:
+            - a: faldo:ExactPosition
+            - a: faldo:ForwardStrandPosition
+            - faldo:position:
+              - reverseprimer_end_position: 5420814
+            - faldo:reference:
+              - reverseprimer_end_reference: <https://plantgarden.jp/en/list/t3625/sequence/LG23>
+  - pg_ns:sequence:
+    - reverseprimer_sequence: "GGGAAGGTATGATGAAATCG"
+
+# http://plantgarden.jp/resource/trait
+- Trait pg_resource:t29760.T000001:
+  - a: obo:SO_0000771   # QTL
+  - a: pg_ns:TraitRealted
+  - rdfs:label:
+    - trait_label: "NA"
+  - rdfs:seeAlso:
+    - trait_seealso: <https://plantgarden.jp/ja/search/trait/t29760/t29760.T000001>   # <https://plantgarden.jp/en/search/trait/t29760/t29760.T000001>
+  - sio:has_annotation:
+    - trait_has_annotation: TraitAnnotation
+  - pg_ns:analysis_method:
+    - trait_analysis_method: "QTL analysis"
+  - pg_ns:has_mapfeature:
+    - trait_has_mapfeature:
+      - []:
+        - a: pg_ns:Mapfeature
+        - a: faldo:Position
+        - faldo:position:
+          - trait_map_position: "I(Italia x Big Perlon) LG_19"
+        - faldo:reference:
+          - trait_map_reference: <http://plantgarden.jp/resource/linkage-map#t29760>
+  - pg_ns:has_trait:
+    - trait_has_trait: obo:TO_0000183
+  - pg_ns:max_lod:
+    - trait_max_lod: <https://plantgardden.jp/ns/NA>
+  - pg_ns:p_value:
+    - trait_p_value: "3.28"
+  - pg_ns:trait:
+    - trait_trait: "Cn,Number of clusters/vine"
+  - faldo:location:
+    - []:
+      - a: faldo:Region
+      - pg_ns:nearest_marker1:
+        - trait_nearest_marker1: <https://plantgarden.jp/en/list/t29760/marker/NA>
+      - pg_ns:nearest_marker2:
+        - trait_nearest_marker2: <https://plantgarden.jp/en/list/t29760/marker/NA>
+  - dcterms:references:
+    - trait_references: <http://doi.org/>
+  - pg_ns:genome:
+    - trait_genome: Genome   # <http://plantgarden.jp/resource/NA>
+  - dcterms:identifier:
+    - trait_identifier: "t29760.T000001"
+  - pg_ns:species:
+    - trait_species: Species   # <http://plantgarden.jp/resource/t29760>
+  - pg_ns:species_id:
+    - trait_species_id: "t29760"
+
+- TraitAnnotation <http://plantgarden.jp/resource/t29760.T000002#manual>:
+  - a: pg_ns:TraitAnnotation
+  - prov:hadPrimarySource:
+    - trait_annotaion_had_primary_source: <http://doi.org/>
+  - prov:wasGeneratedBy:
+    - trait_annotaion_was_generated_by: <https://plantgarden.jp/resource/curation_activity>
+  - pg_ns:assertion:
+    - trait_annotaion_assertion: obo:ECO_0000218   # manual assertion
+  - pg_ns:body:
+    - trait_annotaion_body: "Cn,Number of clusters/vine"
+  - pg_ns:category_id:
+    - trait_annotaion_category_id: 6
+  - pg_ns:semanticTags:
+    - trait_annotaion_semantic_tags: obo:TO_0000183   # other miscellaneous trait
+  - pg_ns:target:
+    - trait_annotaion_target: Trait   # <http://plantgarden.jp/resource/t29760.T000002>
+
+- TraitStudy pg_resource:t29760.T000003#study:
+  - a: pg_ns:Study
+  - pg_ns:has_observation:
+    - study_has_observation: Trait   # <http://plantgarden.jp/resource/t29760.T000003>
+  - pg_ns:has_population:
+    - study_has_population: TraitPopulation   # <http://plantgarden.jp/resource/t29760.T000003#population>
+
+- TraitPopulation pg_resource:t29760.T000001#population:
+  - a: sio:SIO_001061   # population
+  - a: pg_ns:double_pseudo-testcross   # pg_ns:F1, pg_ns:Full-sib, pg_ns:S1
+  - rdfs:label:
+    - population_label: "Italia x Big Perlon"
+
+# http://plantgarden.jp/resource/pubtator
+- PGPubtator <http://togodb.org/ontology/pg_pubtator#10030630#abstract-802-809>:
+  - a: <http://togodb.org/pg_pubtator>
+  - rdfs:label:
+    - pubtator_label: "MESH:D002118"
+  - ont_pubtator:end:
+    - pubtator_end: "809"
+  - ont_pubtator:bio_concepts:
+    - pubtator_bio_concepts: "Chemical"
+  - ont_pubtator:id:
+    - pubtator_id: "23837"
+  - ont_pubtator:organism:
+    - pubtator_organism: "Raphanus sativus"
+  - ont_pubtator:pmid:
+    - pubtator_pmid: "10030630"
+  - ont_pubtator:sentence:
+    - pubtator_sentence: "The findings suggested that calcinated calcium may be useful to control E. coli O157:H7 contamination during the production of radish sprouts."
+  - ont_pubtator:start:
+    - pubtator_start: "802"
+  - ont_pubtator:taxonomy_id:
+    - pubtator_taxonomy_id: "t3726"
+  - ont_pubtator:term:
+    - pubtator_term: "calcium"
+
+# http://plantgarden.jp/resource/gene
+- Gene pg_resource:t1000413.G001/gene#t1000413.G001.008048:
+  - a: obo:SO_0000704   # gene
+  - rdfs:seeAlso:
+    - gene_seealso: <https://plantgarden.jp/ja/list/t1000413/all/t1000413.G001.008048>   # <https://plantgarden.jp/en/list/t1000413/all/t1000413.G001.008048>
+  - faldo:location:
+    - []:
+      - a: faldo:Region
+      - faldo:begin:
+        - []:
+          - a: faldo:ExactPosition
+          - a: faldo:ReverseStrandPosition
+          - faldo:position:
+            - gene_begin_position: 1523985
+          - faldo:reference:
+            - gene_begin_reference: <http://plantgarden.jp/resource/t1000413.G001/sequence#>
+      - faldo:end:
+        - []:
+          - a: faldo:ExactPosition
+          - a: faldo:ReverseStrandPosition
+          - faldo:position:
+            - gene_end_position: 1523053
+          - faldo:reference:
+            - gene_end_reference: <http://plantgarden.jp/resource/t1000413.G001/sequence#>
+  - dcterms:identifier:
+    - gene_identifier: "t1000413.G001.008048"
+
+- CDS <http://plantgarden.jp/resource/t1000413.G001/cds#Acyan01G0004300.1>:
+  - a: obo:SO_0000316   # CDS
+  - rdfs:comment:
+    - cds_comment: ""
+  - rdfs:seeAlso:
+    - cds_seealso: <https://plantgarden.jp/ja/seq/t1000413/t1000413.G001/cds/Acyan01G0004300.1>   # <https://plantgarden.jp/en/seq/t1000413/t1000413.G001/cds/Acyan01G0004300.1>
+  - dcterms:identifier:
+    - cds_identifier: "Acyan01G0004300.1"
+  - obo:BFO_0000050:   # part_of
+    - cds_part_of: Gene   # <http://plantgarden.jp/resource/gene#t1000413.G001.008272>
+  - obo:RO_0002162:   # in_taxon
+    - cds_in_taxon: Taxonomy   # <http://identifiers.org/taxonomy/>
+  - pg_ns:annotation_version:
+    - cds_annotation_version: ""
+
+- PolyPeptide <http://plantgarden.jp/resource/t1000413.G001/pep#Acyan01G0004300.1>:
+  - a: obo:SO_0000104    # polypeptide
+  - rdfs:label:
+    - peptide_label: ""
+  - rdfs:seeAlso:
+    - peptide_seealso: <https://plantgarden.jp/ja/seq/t1000413/t1000413.G001/pep/Acyan01G0004300.1>   # <https://plantgarden.jp/en/seq/t1000413/t1000413.G001/pep/Acyan01G0004300.1>
+  - dcterms:indentifier:
+    - peptide_id: "Acyan01G0004300.1"
+  - obo:RO_0001000:   # derives from
+    - peptide_derives_from: <http://plantgarden.jp/resource/t1000413.G001/cds#Acyan01G0004300.1>
+  - pg_ns:classifiedWith:
+    - peptide_classified_with: <https://identifiers.org/kegg.orthology:>
+  - sio:SIO_000558:   # is_orthologous_to
+    - peptide_is_orthologous_to: <http://purl.uniprot.org/uniprot/>
+
+# http://plantgarden.jp/resource/taxonomy
+- Taxonomy <http://identifiers.org/taxonomy/10>:
+  - a: tax:Taxon
+  - rdfs:label:
+    - taxonomy_label: "Cellvibrio"
+  - rdfs:seeAlso:
+    - taxonomy_seealso: <http://purl.uniprot.org/taxonomy/10>
+  - tax:authority:
+    - taxonomy_authority: "Cellvibrio (ex Winogradsky 1929) Blackall et al. 1986 emend. Suarez et al. 2014"
+  - tax:geneticCode:
+    - taxonomy_genetic_code: GeneticCode   # tax:GeneticCode11
+  - tax:geneticCodeMt:
+    - taxonomy_genetic_code_mt: GeneticCode   # tax:GeneticCode1
+  - tax:rank:
+    - taxonomy_rank: tax:Genus
+  - tax:typeMaterial:
+    - taxonomy_type_material: "272"
+  - tax:scientificName:
+    - taxonomy_scientific_name: "Cellvibrio"
+  - tax:synonym:
+    - taxonomy_synonym: "Microcyclus aquaticus"
+  - tax:uniqueName:
+    - taxonomy_unique_name: "ATCC 25396 <type strain>"
+  - tax:acronym:
+    - taxonomy_acronym: "187"
+  - tax:blastName:
+    - taxonomy_blast_name: "bees"
+  - tax:commonName:
+    - taxonomy_common_name: "American cranberry"
+  - tax:equivalentName:
+    - taxonomy_equivalent_name: "Vitis labruscana x Vitis vinifera"
+  - tax:genbankAcronym:
+    - taxonomy_genbank_acronym: "RaMV"
+  - tax:genbankCommonName:
+    - taxonomy_genbank_common_name: "Chinese cabbage"
+  - tax:genbankSynonym:
+    - taxonomy_genbank_synonym: "Gerbera hybrida"
+  - owl:sameAs:
+    - taxonomy_sameas: tax:taxonomy/10   # <http://purl.org/obo/owl/NCBITaxon#10>, <http://www.ncbi.nlm.nih.gov/taxonomy/10>, <http://purl.obolibrary.org/obo/NCBITaxon_10>
+  - rdfs:subClassOf:
+    - taxonomy_subclass_of: Taxonomy   # <http://identifiers.org/taxonomy/1706371>
+  - tax:inPart:
+    - taxonomy_in_part: "algae"
+  - tax:includes:
+    - taxonomy_includes: "Burkholderia sp. 383"
+  - tax:merged:
+    - taxonomy_merged: Taxonomy   # <http://identifiers.org/taxonomy/100142>
+  - dcterms:identifier:
+    - taxonomy_identifier: 10
+
+- Rank tax:Biotype:   # tax:Genus, tax:Species etc.
+  - a: tax:Rank
+  - rdfs:label:
+    - rank_label: "biotype"
+    
+- GeneticCode tax:GeneticCode1:
+  - a: tax:GeneticCode
+  - rdfs:label:
+    - genetic_code_label: "Standard"
+
+# http://plantgarden.jp/resource/knapsack
+- KnapsackRecord <http://mb-wiki.nig.ac.jp/resource/C00007830>:
+  - a: metabo:KNApSAcKCoreRecord
+  - rdfs:label:
+    - knapsack_record_label: "2-Methylpropyl glucosinolate;Isobutyl glucosinolate"
+  - rdfs:seeAlso:
+    - knapsack_record_seealso: <ttp://www.knapsackfamily.com/knapsack_core/info.php?sname=C_ID&word=C00007830>
+  - sio:CHEMINF_000200:   # has attribute
+    - knapsack_record_has_chem_attribute: <http://mb-wiki.nig.ac.jp/resource/C00007830\/cas>   # smiles, standard_inchi, standard_inchikey, start_substance
+  - metabo:fid:
+    - knapsack_record_fid: "C11H21NO9S2_C00007830"
+  - dc:identifier:
+    - knapsack_record_identifier: "C00007830"
+  - dc:hasPart:
+    - knapsack_record_has_part: <http://mb-wiki.nig.ac.jp/resource/C00007830\/gif>   # x-chemdraw, x-mdl-molfile
+  - sio:SIO_000008:   # has attribute
+    - knapsack_record_has_attribute: <http://mb-wiki.nig.ac.jp/resource/C00007830\/molecular_formula>   # names
+  - sio:SIO_000255:   # has annotation
+    - knapsack_record_has_annotation: <http://mb-wiki.nig.ac.jp/resource/C00007830/organism#Conringia%20orientalis>
+  - foaf:homepage:
+    - knapsack_record_homepage: <http://mb-wiki.nig.ac.jp/C00007830>
+
+- KnapsackAnnotations <http://mb-wiki.nig.ac.jp/resource/C00007829/organism#Peltaria%20alliaceae>:
+  - a: metabo:KNApSAcKCoreAnnotations
+  - rdfs:seeAlso:
+    - knapsack_annotation_seealso: Taxonomy   # <http://identifiers.org/taxonomy/78191>
+  - dcterms:references:
+    - knapsack_annotation_references_pmd: <http://identifiers.org/pubmed/13328033>
+  - metabo:family:
+    - knapsack_annotation_family: "Cruciferae"
+  - metabo:kingdom:
+    - knapsack_annotation_kingdom: "Plantae"
+  - metabo:organism:
+    - knapsack_annotation_organism: "Arabis hirsuta"
+  - metabo:pmid:
+    - knapsack_annotation_pmid: "13328033"
+  - metabo:references: 
+    - knapsack_annotation_references: "Cole,Phytochem.,15,(1976),759"
+  - metabo:sp1:
+    - knapsack_annotation_sp1: ""
+  
+- InChIKey <http://mb-wiki.nig.ac.jp/resource/C00007829\/standard_inchikey>:
+  - a: sio:CHEMINF_000059   # InChIKey
+  - rdfs:seeAlso:
+    - inchikey_seealso: <http://identifiers.org/inchikey/ILUBRPXEPXJTNF-RMBARPIJNA-N>
+  - sio:SIO_000300:   # has value
+    - inchikey: "ILUBRPXEPXJTNF-RMBARPIJNA-N"
+
+- SMILES <http://mb-wiki.nig.ac.jp/resource/C00007830\/smiles>:
+  - a: sio:CHEMINF_000018   # SMILES descriptor
+  - sio:SIO_000300:
+    - smiles: '"O[C@@H]1[C@@H]([C@H]([C@H](O[C@H]1CO)S/C(=N\OS(=O)(=O)O)/CC(C)C)O)O"'
+    
+- MolecularFormula <http://mb-wiki.nig.ac.jp/resource/C00007830\/molecular_formula>:
+  - a: sio:CHEMINF_000042
+  - sio:SIO_000300:
+    - molecular_formula: "C11H21NO9S2"
+    
+- MolecularEntityName <http://mb-wiki.nig.ac.jp/resource/C00007830\/names>:
+  - a: sio:CHEMINF_000043
+  - sio:SIO_000300:
+    - molecular_name: "2-Methylpropyl glucosinolate;Isobutyl glucosinolate"
+    
+- MOLfile <http://mb-wiki.nig.ac.jp/resource/C00007829\/x-mdl-molfile>:
+  - a: sio:CHEMINF_000058
+  - rdfs:seeAlso:
+    - molfile_seealso: <http://mb-wiki.nig.ac.jp/Mol:C00000091>
+  - dcterms:format:
+    - molfile_format: nrn:mimetype:chemical/x-mdl-molfile
+
+- InChI <http://mb-wiki.nig.ac.jp/resource/C00007829\/standard_inchi>:
+  - a: sio:CHEMINF_000113
+  - rdfs:seeAlso:
+    - inchi_seealso: <http://identifiers.org/inchi/InChI=1S/C11H19NO9S2/c1-5(2)3-7(12-21-23(17,18)19)22-11-10(16)9(15)8(14)6(4-13)20-11/h6,8-11,13-16H,1,3-4H2,2H3,(H,17,18,19)/b12-7+/t6-,8-,9+,10+,11+/m0/s1>
+  - sio:SIO_000300:
+    - inchi: "InChI=1S/C11H19NO9S2/c1-5(2)3-7(12-21-23(17,18)19)22-11-10(16)9(15)8(14)6(4-13)20-11/h6,8-11,13-16H,1,3-4H2,2H3,(H,17,18,19)/b12-7+/t6-,8-,9+,10+,11+/m0/s1"
+
+- CDXfile <http://mb-wiki.nig.ac.jp/resource/C00007829\/x-chemdraw>:
+  - a: metabo:CDXfile
+  - rdfs:seeAlso:
+    - cdx_seealso: <http://mb-wiki.nig.ac.jp/File:C00000091.cdx>
+  - dcterms:format:
+    - cdx_format: nrn:mimetype:chemical/x-chemdraw
+
+- SDfile <http://mb-wiki.nig.ac.jp/resource/C00007829\/gif>:
+  - a: metabo:SDfile
+  - rdfs:seeAlso:
+    - sd_seealso: <http://mb-wiki.nig.ac.jp/File:C00000091.gif>
+  - dcterms:format:
+    - sd_format: nrn:mimetype:image/gif
+
+- StartSubstance <http://mb-wiki.nig.ac.jp/resource/C00007829\/start_substance>:
+  - a: metabo:Start_substance
+  - sio:SIO_000300:
+    - start_substance: "L-Arg;L-Ala"

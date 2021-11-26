@@ -1,0 +1,16 @@
+obo: <http://purl.obolibrary.org/obo/>
+rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+dcterms: <http://purl.org/dc/terms/>
+dc: <http://purl.org/dc/elements/1.1/>
+faldo: <http://biohackathon.org/resource/faldo#>
+tax: <http://ddbj.nig.ac.jp/ontologies/taxonomy/>
+metabo: <http://ddbj.nig.ac.jp/ontolofies/metabobank/>
+sio: <http://semanticscience.org/resource/>
+prov: <http://www.w3.org/ns/prov#>
+owl: <http://www.w3.org/2002/07/owl#>
+foaf: <http://xmlns.com/foaf/0.1/>
+pg_ns: <https://plantgardden.jp/ns/>
+pg_resource: <http://plantgarden.jp/resource/>
+ont_pubtator: <http://togodb.org/ontology/pg_pubtator#>
+pg_pubtator: <http://togodb.org/entry/pg_pubtator/>
