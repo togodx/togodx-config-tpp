@@ -1,0 +1,11 @@
+{
+  "aggregate": {
+    "url": "https://example.togodx.server.tpp/aggregate"
+  },
+  "dataframe": {
+    "url": "https://example.togodx.server.tpp/dataframe"
+  },
+  "locate": {
+    "url": "https://example.togodx.server.tpp/locate"
+  }
+}

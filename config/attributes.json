@@ -1,0 +1,179 @@
+{
+  "categories": [
+    {
+      "id": "metabobank",
+      "label": "MetaboBank",
+      "attributes": [
+        "compound_chemical_role_chebi",
+        "compound_application_type_chebi",
+        "compound_biological_role_chebi",
+        "metabobank_molecular_weight_knapsack",
+        "metabobank_metabolite_activity_knapsack"
+      ]
+    },
+    {
+      "id": "test",
+      "label": "Test",
+      "attributes": [
+        "plantgarden_genome_marker",
+        "knapsack"
+      ]
+    }
+  ],
+  "attributes": {
+    "compound_chemical_role_chebi": {
+      "label": "Chemical role",
+      "description": "Classification based on the chemical roles, such as antioxidant or environmental contaminant from ChEBI",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/compound_chemical_role_chebi",
+      "dataset": "chebi",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "Chemical role from ChEBI",
+          "url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:51086",
+          "version": null,
+          "updated": "2021-08-01"
+        }
+      ]
+    },
+    "compound_application_type_chebi": {
+      "label": "Application type",
+      "description": "Classification based on the application types, such as pharmaceutical or pesticide from ChEBI",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/compound_application_type_chebi",
+      "dataset": "chebi",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "Application type from ChEBI",
+          "url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33232",
+          "version": null,
+          "updated": "2021-08-01"
+        }
+      ]
+    },
+    "compound_biological_role_chebi": {
+      "label": "Biological role",
+      "description": "Classification based on the biological roles, such as inhibitor or antimicrobial agent from ChEBI",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/compound_biological_role_chebi",
+      "dataset": "chebi",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "Biological role from ChEBI ",
+          "url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:24432",
+          "version": null,
+          "updated": "2021-08-01"
+        }
+      ]
+    },
+    "metabobank_molecular_weight_knapsack" : {
+      "label": "Molecular weight",
+      "description": "hoge",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/metabobank_molecular_weight_knapsack",
+      "dataset": "knapsack",
+      "datamodel": "distribution",
+      "source": [
+        {
+          "label": "KNApSAcK",
+          "url": "http://hoge",
+          "version": null,
+          "updated": "2020-10-29"
+        }
+      ]
+    },
+    "metabobank_metabolite_activity_knapsack": {
+      "label": "Metabolite activity",
+      "description": "hoge",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/metabobank_metabolite_activity_knapsack",
+      "dataset": "knapsack",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "KNApSAcK",
+          "url": "http://hoge",
+          "version": null,
+          "updated": "2020-10-29"
+        }
+      ]
+    },
+    "plantgarden_genome_marker": {
+      "label": "PlantGarden genome marker",
+      "description": "Gene classification annotated in Ensembl",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_genome_marker",
+      "dataset": "genome_marker",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "Ensembl",
+          "url": "http://nov2020.archive.ensembl.org/Homo_sapiens/Info/Index",
+          "version": null,
+          "updated": "2020-10-29"
+        }
+      ]
+    },
+    "knapsack": {
+      "label": "KNApSAcK",
+      "description": "Gene classification annotated in Ensembl",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/knapsack",
+      "dataset": "knapsack",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "KNApSAcK",
+          "url": "http://hoge",
+          "version": null,
+          "updated": "2020-10-29"
+        }
+      ]
+    }
+  },
+  "datasets": {
+    "chebi": {
+      "label": "ChEBI compound",
+      "template": "https://raw.githubusercontent.com/togodx/togodx-config-tpp/develop/templates/chebi.hbs",
+      "target": true,
+      "examples": [
+        "CHEBI:15996",
+        "CHEBI:50114",
+        "CHEBI:15377",
+        "CHEBI:57540",
+        "CHEBI:17154",
+        "CHEBI:18367",
+        "CHEBI:30616",
+        "CHEBI:456216",
+        "CHEBI:29108",
+        "CHEBI:29105"
+      ],
+      "conversion": {
+        "knapsack": "https://hoge",
+        "taxonomy": "https://hoge"
+      }
+    },
+    "knapsack": {
+      "label": "KNApSAcK",
+      "template": "https://raw.githubusercontent.com/togodx/togodx-config-tpp/develop/templates/knapsack.hbs",
+      "target": true,
+      "examples": [
+        "C00058821",
+	"C00058820"
+      ],
+      "conversion": {
+        "chebi": "https://hoge",
+        "taxonomy": "https://hoge"
+      }
+    },
+    "taxonomy": {
+      "label": "NCBI taxonomy",
+      "template": "https://raw.githubusercontent.com/togodx/togodx-config-tpp/develop/templates/taxonomy.hbs",
+      "target": true,
+      "examples": [
+        "9606",
+	"3702"
+      ],
+      "conversion": {
+        "chebi": "https://hoge",
+        "knapsack": "https://hoge"
+      }
+    }
+  }
+}
