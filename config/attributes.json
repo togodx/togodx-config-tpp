@@ -12,11 +12,24 @@
       ]
     },
     {
-      "id": "test",
-      "label": "Test",
+      "id": "plantgardern",
+      "label": "Plant GARDEN",
       "attributes": [
-        "plantgarden_genome_marker",
-        "knapsack"
+	"plantgarden_mesh_term_pubtator",
+	"plantgarden_genome_id_genome",
+        "plantgarden_taxonomy_knapsack",
+	"plantgarden_so_gene",
+        "plantgarden_genome_marker"
+      ]
+    },
+    {
+      "id": "microbedbjp",
+      "label": "MicrobeDB.jp",
+      "attributes": [
+        "microbedbjp_metagenome_host_biosample",
+        "microbedbjp_meo_component_biosample",
+        "microbedbjp_meo_env_biosample",
+        "microbedbjp_taxon_taxonomy"
       ]
     }
   ],
@@ -68,7 +81,7 @@
     },
     "metabobank_molecular_weight_knapsack" : {
       "label": "Molecular weight",
-      "description": "hoge",
+      "description": "Molecular weight of Compound from KNApSAcK",
       "api": "https://exapmel.togodx.server.tpp/breakdown/metabobank_molecular_weight_knapsack",
       "dataset": "knapsack",
       "datamodel": "distribution",
@@ -83,7 +96,7 @@
     },
     "metabobank_metabolite_activity_knapsack": {
       "label": "Metabolite activity",
-      "description": "hoge",
+      "description": "TBW",
       "api": "https://exapmel.togodx.server.tpp/breakdown/metabobank_metabolite_activity_knapsack",
       "dataset": "knapsack",
       "datamodel": "classification",
@@ -98,28 +111,133 @@
     },
     "plantgarden_genome_marker": {
       "label": "PlantGarden genome marker",
-      "description": "Gene classification annotated in Ensembl",
+      "description": "Genome marker classification in Plant GARDEN",
       "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_genome_marker",
       "dataset": "genome_marker",
       "datamodel": "classification",
       "source": [
         {
-          "label": "Ensembl",
+          "label": "genome_markeer",
           "url": "http://nov2020.archive.ensembl.org/Homo_sapiens/Info/Index",
           "version": null,
           "updated": "2020-10-29"
         }
       ]
     },
-    "knapsack": {
-      "label": "KNApSAcK",
-      "description": "Gene classification annotated in Ensembl",
-      "api": "https://exapmel.togodx.server.tpp/breakdown/knapsack",
+    "plantgarden_taxonomy_knapsack": {
+      "label": "Taxonomy KNApSAcK",
+      "description": "Taxonomy annotated in KNApSAcK",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_taxonomy_knapsack",
       "dataset": "knapsack",
       "datamodel": "classification",
       "source": [
         {
           "label": "KNApSAcK",
+          "url": "http://hoge",
+          "version": null,
+          "updated": "2020-10-29"
+        }
+      ]
+    },
+    "plantgarden_mesh_term_pubtator": {
+      "label": "Compounds in plants",
+      "description": "Compounds reported to be present in plants, which were cllected by pubtator",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_mesh_term_pubtator",
+      "dataset": "pubtator",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "KNApSAcK",
+          "url": "http://hoge",
+          "version": null,
+          "updated": "2020-10-29"
+        }
+      ]
+    },
+    "plantgarden_genome_id_genome": {
+      "label": "Genome",
+      "description": "TBW",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_genome_id_genome",
+      "dataset": "genome",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "KNApSAcK",
+          "url": "http://hoge",
+          "version": null,
+          "updated": "2020-10-29"
+        }
+      ]
+    },
+    "plantgarden_so_gene": {
+      "label": "KNApSAcK",
+      "description": "Sequence classification with sequence ontology",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_so_gene",
+      "dataset": "ensembl_gene",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "KNApSAcK",
+          "url": "http://hoge",
+          "version": null,
+          "updated": "2020-10-29"
+        }
+      ]
+    },
+    "microbedbjp_metagenome_host_biosample": {
+      "label": "Metagenome Host",
+      "description": "TBW",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/microbedbjp_metagenome_host_biosample",
+      "dataset": "biosample",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "MicrobeDB.jp",
+          "url": "http://hoge",
+          "version": null,
+          "updated": "2020-10-29"
+        }
+      ]
+    },
+    "microbedbjp_taxon_taxonomy": {
+      "label": "Taxon",
+      "description": "TBW",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/microbedbjp_taxon_taxonomy",
+      "dataset": "taxonomy",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "MicrobeDB.jp",
+          "url": "http://hoge",
+          "version": null,
+          "updated": "2020-10-29"
+        }
+      ]
+    },
+    "microbedbjp_meo_component_biosample": {
+      "label": "MEO component",
+      "description": "TBW",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/microbedbjp_meo_component_biosample",
+      "dataset": "biosample",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "MicrobeDB.jp",
+          "url": "http://hoge",
+          "version": null,
+          "updated": "2020-10-29"
+        }
+      ]
+    },
+    "microbedbjp_meo_env_biosample": {
+      "label": "MEO environment",
+      "description": "TBW",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/microbedbjp_meo_env_biosample",
+      "dataset": "biosample",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "MicrobeDB.jp",
           "url": "http://hoge",
           "version": null,
           "updated": "2020-10-29"
@@ -146,7 +264,8 @@
       ],
       "conversion": {
         "knapsack": "https://hoge",
-        "taxonomy": "https://hoge"
+        "taxonomy": "https://hoge",
+	"biosample": "https://hoge"
       }
     },
     "knapsack": {
@@ -159,7 +278,22 @@
       ],
       "conversion": {
         "chebi": "https://hoge",
+	"biosample": "https://hoge",
         "taxonomy": "https://hoge"
+      }
+    },
+    "biosample": {
+      "label": "BioSample",
+      "template": "https://raw.githubusercontent.com/togodx/togodx-config-tpp/develop/templates/biosample.hbs",
+      "target": true,
+      "examples": [
+        "hoge",
+	"fuga"
+      ],
+      "conversion": {
+        "chebi": "https://hoge",
+        "knapsack": "https://hoge",
+	"taxonomy": "https://hoge"
       }
     },
     "taxonomy": {
@@ -172,7 +306,8 @@
       ],
       "conversion": {
         "chebi": "https://hoge",
-        "knapsack": "https://hoge"
+        "knapsack": "https://hoge",
+	"biosample": "https://hoge"
       }
     }
   }
