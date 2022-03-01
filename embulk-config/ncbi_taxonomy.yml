@@ -1,7 +1,8 @@
 in:
   type: sparql
   #endpoint: https://microbedb.jp/sparql
-  endpoint: https://mb2.ddbj.nig.ac.jp/sparql
+  #endpoint: https://mb2.ddbj.nig.ac.jp/sparql
+  endpoint: http://localhost:8890/sparql
   query: |
     PREFIX tax: <http://ddbj.nig.ac.jp/ontologies/taxonomy/>
     PREFIX dc: <http://purl.org/dc/terms/>

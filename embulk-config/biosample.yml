@@ -1,0 +1,28 @@
+in:
+  type: sparql
+  #endpoint: https://microbedb.jp/sparql
+  #endpoint: https://mb2.ddbj.nig.ac.jp/sparql
+  endpoint: http://localhost:8890/sparql
+  query: |
+    PREFIX sio: <http://semanticscience.org/resource/>
+    PREFIX dc: <http://purl.org/dc/terms/>
+    SELECT DISTINCT ?uri ?identifier ?name ?property ?alternateName
+      FROM <http://microbedb.jp/biosample/metadata>
+      FROM <http://microbedb.jp/biosample/genome/metadata>
+    WHERE
+    {
+      VALUES ?property { dc:title }
+      ?uri dc:identifier ?identifier .
+      ?uri dc:title ?name .
+      ?uri a sio:SIO_001050 ;
+      ?property ?alternateName .
+    } ORDER BY ?uri
+    #LIMIT 1000
+  columns:
+      #- { name: _id, type: string }
+    - { name: identifier, type: string }
+    - { name: name, type: string }
+    - { name: property, type: string }
+    - { name: alternateName, type: string }
+    #- { name: exp, type: json }
+out: {type: stdout} 
