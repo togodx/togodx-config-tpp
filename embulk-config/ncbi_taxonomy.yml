@@ -1,0 +1,31 @@
+in:
+  type: sparql
+  #endpoint: https://microbedb.jp/sparql
+  endpoint: https://mb2.ddbj.nig.ac.jp/sparql
+  query: |
+    PREFIX tax: <http://ddbj.nig.ac.jp/ontologies/taxonomy/>
+    PREFIX dc: <http://purl.org/dc/terms/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    SELECT
+      DISTINCT ?identifier ?name ?property ?alternateName
+    WHERE
+    {
+    VALUES ?name_prop { tax:scientificName tax:synonym tax:genbankSynonym tax:equivalentName
+      tax:authority tax:commonName tax:genbankCommonName tax:anamorph
+      tax:genbankAnamorph tax:teleomorph tax:unpublishedName tax:includes }
+    ?tax dc:identifier ?identifier .
+    ?tax tax:scientificName ?name .
+    ?tax a tax:Taxon .
+    ?tax rdfs:subClassOf* ?parent_tax .
+    ?name_prop rdfs:label ?property.
+    ?parent_tax ?name_prop ?alternateName .
+    }
+    #LIMIT 1000
+  columns:
+      #- { name: _id, type: string }
+    - { name: identifier, type: string }
+    - { name: name, type: string }
+    - { name: property, type: string }
+    - { name: alternateName, type: string }
+    #- { name: exp, type: json }
+out: {type: stdout} 
