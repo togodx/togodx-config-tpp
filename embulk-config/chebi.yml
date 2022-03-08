@@ -1,0 +1,53 @@
+in:
+  type: sparql
+  #endpoint: https://integbio.jp/rdf/sparql
+  #endpoint: https://integbio.jp/rdf/ebi/sparql
+  endpoint: https://mb2.ddbj.nig.ac.jp/sparql
+  #endpoint: https://localhost:18890/sparql
+  #endpoint: https://integbio.jp/rdf/mirror/alt/bioportal/sparql    
+  query: |
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX obo: <http://purl.obolibrary.org/obo/>
+    PREFIX oboinowl: <http://www.geneontology.org/formats/oboInOwl#>
+    PREFIX efo: <http://www.ebi.ac.uk/efo/>    
+    SELECT
+    DISTINCT ?identifier ?uri ?name ?property ?alternateName 
+    WHERE{
+      values ?property { 
+      rdfs:label
+      oboinowl:hasAlternativeId
+      oboinowl:hasDbXref
+      oboinowl:hasExactSynonym
+      oboinowl:hasRelatedSynonym
+      efo:MSH_definition_citation
+      efo:NCI_Thesaurus_definition_citation
+      efo:SNOMEDCT_definition_citation
+      efo:alternative_term
+      efo:definition
+      efo:definition_citation
+      <http://purl.obolibrary.org/obo/chebi/charge>
+      <http://purl.obolibrary.org/obo/chebi/formula>
+      <http://purl.obolibrary.org/obo/chebi/inchi>
+      <http://purl.obolibrary.org/obo/chebi/inchikey>
+      <http://purl.obolibrary.org/obo/chebi/smiles>                  
+      }
+
+      ?uri ?property ?alternateName.
+      ?uri oboinowl:id ?identifier.
+      ?uri oboinowl:id ?name.
+      ?uri rdf:type owl:Class.
+      ?uri rdfs:subClassOf* ?parent_id .
+      #FILTER(?parent_id = obo:CHEBI_33250) # chemical entity
+      FILTER(?parent_id = obo:CHEBI_24431) # molecular structure
+    }
+    LIMIT 10
+  columns:
+      #- { name: _id, type: string }
+    - { name: identifier, type: string }
+    - { name: name, type: string }
+    - { name: property, type: string }
+    - { name: alternateName, type: string }
+    #- { name: exp, type: json }
+out: {type: stdout} 
