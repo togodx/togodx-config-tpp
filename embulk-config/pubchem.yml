@@ -1,0 +1,32 @@
+in:
+  type: sparql
+  #endpoint: https://microbedb.jp/sparql
+  #endpoint: https://mb2.ddbj.nig.ac.jp/sparql
+  #endpoint: http://localhost:8890/sparql
+  endpoint: https://integbio.jp/rdf/pubchem/sparql
+  query: |
+    PREFIX cpd: <http://rdf.ncbi.nlm.nih.gov/pubchem/compound/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX sio: <http://semanticscience.org/resource/>
+    PREFIX obo: <http://purl.obolibrary.org/obo/>
+    PREFIX descriptor: <http://rdf.ncbi.nlm.nih.gov/pubchem/descriptor/>
+    PREFIX compound: <http://rdf.ncbi.nlm.nih.gov/pubchem/compound/>
+    PREFIX substance: <http://rdf.ncbi.nlm.nih.gov/pubchem/substance/>
+    PREFIX pubchemv: <http://rdf.ncbi.nlm.nih.gov/pubchem/vocabulary#>
+    
+    SELECT
+    DISTINCT ?identifier ?name ?property ?alternateName
+    WHERE{
+      ?identifier ?property ?alternateName.
+      ?identifier rdf:type ?name.
+    }
+    LIMIT 100
+  columns:
+      #- { name: _id, type: string }
+    - { name: identifier, type: string }
+    - { name: name, type: string }
+    - { name: property, type: string }
+    - { name: alternateName, type: string }
+    #- { name: exp, type: json }
+out: {type: stdout} 
