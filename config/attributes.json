@@ -15,11 +15,12 @@
       "id": "plantgardern",
       "label": "Plant GARDEN",
       "attributes": [
-	"plantgarden_mesh_term_pubtator",
+	"plantgarden_pubtator_gene",
+	"plantgarden_compounds_pubtator",
+	"plantgarden_genome_marker",
 	"plantgarden_genome_id_genome",
-        "plantgarden_taxonomy_knapsack",
-	"plantgarden_so_gene",
-        "plantgarden_genome_marker"
+	"plantgarden_taxonomy_species",
+        "plantgarden_taxonomy_knapsack"
       ]
     },
     {
@@ -28,8 +29,7 @@
       "attributes": [
         "microbedbjp_metagenome_host_biosample",
         "microbedbjp_meo_component_biosample",
-        "microbedbjp_meo_env_biosample",
-        "microbedbjp_taxon_taxonomy"
+        "microbedbjp_meo_env_biosample"
       ]
     }
   ],
@@ -88,9 +88,9 @@
       "source": [
         {
           "label": "KNApSAcK",
-          "url": "http://hoge",
+          "url": "http://www.knapsackfamily.com/KNApSAcK/",
           "version": null,
-          "updated": "2020-10-29"
+          "updated": "2022-01-01"
         }
       ]
     },
@@ -103,30 +103,90 @@
       "source": [
         {
           "label": "KNApSAcK",
-          "url": "http://hoge",
+          "url": "http://www.knapsackfamily.com/KNApSAcK/",
           "version": null,
-          "updated": "2020-10-29"
+          "updated": "2022-01-01"
+        }
+      ]
+    },
+    "plantgarden_pubtator_gene": {
+      "label": "PlantGarden Genes from pubtator",
+      "description": "Genes reported in papers related with plants, which were collected by pubtator",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_pubtator_gene",
+      "dataset": "pubtator_gene",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "Plant GARDEN",
+          "url": "https://plantgarden.jp/ja/index",
+          "version": null,
+          "updated": "2022-01-01"
+        }
+      ]
+    },
+    "plantgarden_compounds_pubtator": {
+      "label": "PlantGarden Compounds from pubtator",
+      "description": "Compounds reported in papers related with plants, which were cllected by pubtator",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_compounds_pubtator",
+      "dataset": "pubtator_compound",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "Plant GARDEN",
+          "url": "https://plantgarden.jp/ja/index",
+          "version": null,
+          "updated": "2022-01-01"
         }
       ]
     },
     "plantgarden_genome_marker": {
-      "label": "PlantGarden genome marker",
-      "description": "Genome marker classification in Plant GARDEN",
+      "label": "PlantGarden Markers",
+      "description": "Marker ids are associated with the chromosomes of plants",
       "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_genome_marker",
-      "dataset": "genome_marker",
+      "dataset": "plantgenome_marker",
       "datamodel": "classification",
       "source": [
         {
-          "label": "genome_markeer",
-          "url": "http://nov2020.archive.ensembl.org/Homo_sapiens/Info/Index",
+          "label": "Plant GARDEN",
+          "url": "https://plantgarden.jp/ja/index",
           "version": null,
-          "updated": "2020-10-29"
+          "updated": "2022-01-01"
+        }
+      ]
+    },
+    "plantgarden_genome_id_genome": {
+      "label": "PlantGarden Genomes",
+      "description": "Analyzed genomes with its assembly level",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_genome_id_genome",
+      "dataset": "plantgarden_genome",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "Plant GARDEN",
+          "url": "https://plantgarden.jp/ja/index",
+          "version": null,
+          "updated": "2022-01-01"
+        }
+      ]
+    },
+    "plantgarden_taxonomy_species": {
+      "label": "PlantGarden Taxonomy",
+      "description": "Taxonomy in plantgarden",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_taxonomy_species",
+      "dataset": "taxonomy_name",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "Plant GARDEN",
+          "url": "https://plantgarden.jp/ja/index",
+          "version": null,
+          "updated": "2022-01-01"
         }
       ]
     },
     "plantgarden_taxonomy_knapsack": {
-      "label": "Taxonomy KNApSAcK",
-      "description": "Taxonomy annotated in KNApSAcK",
+      "label": "Knapsack species",
+      "description": "Knapsack compounds in each plant",
       "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_taxonomy_knapsack",
       "dataset": "knapsack",
       "datamodel": "classification",
@@ -135,52 +195,7 @@
           "label": "KNApSAcK",
           "url": "http://hoge",
           "version": null,
-          "updated": "2020-10-29"
-        }
-      ]
-    },
-    "plantgarden_mesh_term_pubtator": {
-      "label": "Compounds in plants",
-      "description": "Compounds reported to be present in plants, which were cllected by pubtator",
-      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_mesh_term_pubtator",
-      "dataset": "pubtator",
-      "datamodel": "classification",
-      "source": [
-        {
-          "label": "KNApSAcK",
-          "url": "http://hoge",
-          "version": null,
-          "updated": "2020-10-29"
-        }
-      ]
-    },
-    "plantgarden_genome_id_genome": {
-      "label": "Genome",
-      "description": "TBW",
-      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_genome_id_genome",
-      "dataset": "genome",
-      "datamodel": "classification",
-      "source": [
-        {
-          "label": "KNApSAcK",
-          "url": "http://hoge",
-          "version": null,
-          "updated": "2020-10-29"
-        }
-      ]
-    },
-    "plantgarden_so_gene": {
-      "label": "KNApSAcK",
-      "description": "Sequence classification with sequence ontology",
-      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_so_gene",
-      "dataset": "ensembl_gene",
-      "datamodel": "classification",
-      "source": [
-        {
-          "label": "KNApSAcK",
-          "url": "http://hoge",
-          "version": null,
-          "updated": "2020-10-29"
+          "updated": "2022-01-01"
         }
       ]
     },
@@ -193,24 +208,9 @@
       "source": [
         {
           "label": "MicrobeDB.jp",
-          "url": "http://hoge",
+          "url": "https://microbedb.jp/",
           "version": null,
-          "updated": "2020-10-29"
-        }
-      ]
-    },
-    "microbedbjp_taxon_taxonomy": {
-      "label": "Taxon",
-      "description": "TBW",
-      "api": "https://exapmel.togodx.server.tpp/breakdown/microbedbjp_taxon_taxonomy",
-      "dataset": "taxonomy",
-      "datamodel": "classification",
-      "source": [
-        {
-          "label": "MicrobeDB.jp",
-          "url": "http://hoge",
-          "version": null,
-          "updated": "2020-10-29"
+          "updated": "2022-01-01"
         }
       ]
     },
@@ -223,9 +223,9 @@
       "source": [
         {
           "label": "MicrobeDB.jp",
-          "url": "http://hoge",
+          "url": "https://microbedb.jp/",
           "version": null,
-          "updated": "2020-10-29"
+          "updated": "2022-01-01"
         }
       ]
     },
@@ -238,9 +238,9 @@
       "source": [
         {
           "label": "MicrobeDB.jp",
-          "url": "http://hoge",
+          "url": "https://microbedb.jp/",
           "version": null,
-          "updated": "2020-10-29"
+          "updated": "2022-01-01"
         }
       ]
     }
