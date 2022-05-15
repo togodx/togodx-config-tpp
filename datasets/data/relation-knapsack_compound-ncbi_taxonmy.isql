@@ -1,0 +1,18 @@
+SPARQL
+## endpoint https://mb2.ddbj.nig.ac.jp/sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX metabo: <http://ddbj.nig.ac.jp/ontolofies/metabobank/>
+SELECT DISTINCT ?knapsack_id ?tax_id
+FROM <http://purl.jp/knapsack/>
+WHERE {
+  ?knapsack a metabo:KNApSAcKCoreRecord ;
+            dc:identifier ?knapsack_id ;
+            sio:SIO_000255 [ a metabo:KNApSAcKCoreAnnotation ;
+                             rdfs:seeAlso ?taxonomy
+                           ] .
+  BIND (STRAFTER(STR(?taxonomy), "http://identifiers.org/taxonomy/") AS ?tax_id)
+}
+#LIMIT 100
+;

@@ -1,0 +1,19 @@
+SPARQL
+## endpoint https://mb2.ddbj.nig.ac.jp/sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX metabo: <http://ddbj.nig.ac.jp/ontolofies/metabobank/>
+SELECT DISTINCT ?knapsack_id ?pmid
+FROM <http://purl.jp/knapsack/>
+WHERE {
+  ?knapsack a metabo:KNApSAcKCoreRecord ;
+            dc:identifier ?knapsack_id ;
+            dct:isReferencedBy [ a metabo:KNApSAcKReference ;
+                                 dct:references ?pmid_id
+                               ] . 
+  BIND (STRAFTER(STR(?pmid_id), "http://identifiers.org/pubmed/") AS ?pmid)
+}
+#LIMIT 100
+;

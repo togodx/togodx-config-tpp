@@ -1,0 +1,14 @@
+SPARQL
+## endpoint https://microbedb.jp/sparql
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX dct: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?biosample_id ?tax_id
+WHERE {
+  ?biosample a sio:SIO_001050 ;
+             dct:identifier ?biosample_id ;
+             obo:RO_0002162 ?taxonomy .
+  BIND (STRAFTER(STR(?taxonomy), "http://identifiers.org/taxonomy/") AS ?tax_id)
+}
+;
+#LIMIT 100

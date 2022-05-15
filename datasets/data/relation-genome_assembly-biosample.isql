@@ -1,0 +1,13 @@
+SPARQL
+## endpoint http://togogenome.org/sparql
+PREFIX asm: <http://ddbj.nig.ac.jp/ontologies/assembly/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?assembly_id ?biosample_id
+FROM <http://togogenome.org/graph/assembly_report>
+WHERE {
+  ?assembly a asm:Assembly_Database_Entry ;
+            asm:assembly_id ?assembly_id ;
+            asm:biosample_accession ?biosample_id .
+}
+#LIMIT 100
+;
