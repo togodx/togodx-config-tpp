@@ -173,7 +173,7 @@
       "label": "PlantGarden Taxonomy",
       "description": "Taxonomy in plantgarden",
       "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_taxonomy_species",
-      "dataset": "taxonomy_name",
+      "dataset": "ncbi_taxonomy",
       "datamodel": "classification",
       "source": [
         {
