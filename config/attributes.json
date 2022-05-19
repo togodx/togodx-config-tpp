@@ -243,7 +243,52 @@
           "updated": "2022-01-01"
         }
       ]
-    }
+    },
+    "togogenome_assembly_level": {
+      "label": "Genome Assembly Level",
+      "description": "Assembly level of genomes in TogoGenome",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/togogenome_assembly_level",
+      "dataset": "genome_assembly",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "TogoGenome",
+          "url": "https://togogenome.org/",
+          "version": null,
+          "updated": "2022-05-19"
+        }
+      ]
+    },
+    "togogenome_refseq_category": {
+      "label": "RefSeq category of genomes",
+      "description": "RefSeq category of genomes in TogoGenome",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/togogenome_refseq_category",
+      "dataset": "genome_assembly",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "TogoGenome",
+          "url": "https://togogenome.org/",
+          "version": null,
+          "updated": "2022-05-19"
+        }
+      ]
+    },
+    "togogenome_release_date": {
+      "label": "Genome Rlease Year",
+      "description": "Rlease year of genomes in TogoGenome",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/togogenome_refseq_category",
+      "dataset": "genome_assembly",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "TogoGenome",
+          "url": "https://togogenome.org/",
+          "version": null,
+          "updated": "2022-05-19"
+        }
+      ]
+    }          
   },
   "datasets": {
     "chebi": {
