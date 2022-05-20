@@ -4,9 +4,7 @@
       "id": "metabobank",
       "label": "MetaboBank",
       "attributes": [
-        "compound_chemical_role_chebi",
-        "compound_application_type_chebi",
-        "compound_biological_role_chebi",
+        "plantgarden_taxonomy_knapsack",
         "metabobank_molecular_weight_knapsack",
         "metabobank_metabolite_activity_knapsack"
       ]
@@ -15,12 +13,11 @@
       "id": "plantgardern",
       "label": "Plant GARDEN",
       "attributes": [
-	"plantgarden_pubtator_gene",
-	"plantgarden_compounds_pubtator",
-	"plantgarden_genome_marker",
-	"plantgarden_genome_id_genome",
-	"plantgarden_taxonomy_species",
-        "plantgarden_taxonomy_knapsack"
+      	"plantgarden_pubtator_gene",
+      	"plantgarden_compounds_pubtator",
+      	"plantgarden_genome_marker",
+      	"plantgarden_genome_id_genome",
+      	"plantgarden_taxonomy_species"
       ]
     },
     {
@@ -31,11 +28,29 @@
         "microbedbjp_meo_component_biosample",
         "microbedbjp_meo_env_biosample"
       ]
-    }
+    },
+    {
+      "id": "togogenome",
+      "label": "TogoGenome",
+      "attributes": [
+        "togogenome_assembly_level",
+        "togogenome_refseq_category",
+        "togogenome_release_date"
+      ]
+    },
+    {
+      "id": "rdfportal",
+      "label": "RDF Portal",
+      "attributes": [
+        "compound_chemical_role_chebi",
+        "compound_application_type_chebi",
+        "compound_biological_role_chebi"
+      ]
+    }        
   ],
   "attributes": {
     "compound_chemical_role_chebi": {
-      "label": "Chemical role",
+      "label": "ChEBI Chemical role",
       "description": "Classification based on the chemical roles, such as antioxidant or environmental contaminant from ChEBI",
       "api": "https://exapmel.togodx.server.tpp/breakdown/compound_chemical_role_chebi",
       "dataset": "chebi",
@@ -50,7 +65,7 @@
       ]
     },
     "compound_application_type_chebi": {
-      "label": "Application type",
+      "label": "ChEBI Application type",
       "description": "Classification based on the application types, such as pharmaceutical or pesticide from ChEBI",
       "api": "https://exapmel.togodx.server.tpp/breakdown/compound_application_type_chebi",
       "dataset": "chebi",
@@ -65,7 +80,7 @@
       ]
     },
     "compound_biological_role_chebi": {
-      "label": "Biological role",
+      "label": "ChEBI Biological role",
       "description": "Classification based on the biological roles, such as inhibitor or antimicrobial agent from ChEBI",
       "api": "https://exapmel.togodx.server.tpp/breakdown/compound_biological_role_chebi",
       "dataset": "chebi",
@@ -79,8 +94,23 @@
         }
       ]
     },
+    "plantgarden_taxonomy_knapsack": {
+      "label": "Knapsack species",
+      "description": "Knapsack compounds in each plant",
+      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_taxonomy_knapsack",
+      "dataset": "knapsack",
+      "datamodel": "classification",
+      "source": [
+        {
+          "label": "KNApSAcK",
+          "url": "http://hoge",
+          "version": null,
+          "updated": "2022-01-01"
+        }
+      ]
+    },    
     "metabobank_molecular_weight_knapsack" : {
-      "label": "Molecular weight",
+      "label": "KNApSAcK Molecular weight",
       "description": "Molecular weight of Compound from KNApSAcK",
       "api": "https://exapmel.togodx.server.tpp/breakdown/metabobank_molecular_weight_knapsack",
       "dataset": "knapsack",
@@ -179,21 +209,6 @@
         {
           "label": "Plant GARDEN",
           "url": "https://plantgarden.jp/ja/index",
-          "version": null,
-          "updated": "2022-01-01"
-        }
-      ]
-    },
-    "plantgarden_taxonomy_knapsack": {
-      "label": "Knapsack species",
-      "description": "Knapsack compounds in each plant",
-      "api": "https://exapmel.togodx.server.tpp/breakdown/plantgarden_taxonomy_knapsack",
-      "dataset": "knapsack",
-      "datamodel": "classification",
-      "source": [
-        {
-          "label": "KNApSAcK",
-          "url": "http://hoge",
           "version": null,
           "updated": "2022-01-01"
         }
@@ -319,11 +334,11 @@
       "target": true,
       "examples": [
         "C00058821",
-	"C00058820"
+      	"C00058820"
       ],
       "conversion": {
         "chebi": "https://hoge",
-	"biosample": "https://hoge",
+      	"biosample": "https://hoge",
         "taxonomy": "https://hoge"
       }
     },
@@ -333,12 +348,12 @@
       "target": true,
       "examples": [
         "hoge",
-	"fuga"
+      	"fuga"
       ],
       "conversion": {
         "chebi": "https://hoge",
         "knapsack": "https://hoge",
-	"taxonomy": "https://hoge"
+      	"taxonomy": "https://hoge"
       }
     },
     "taxonomy": {
@@ -347,12 +362,12 @@
       "target": true,
       "examples": [
         "9606",
-	"3702"
+      	"3702"
       ],
       "conversion": {
         "chebi": "https://hoge",
         "knapsack": "https://hoge",
-	"biosample": "https://hoge"
+      	"biosample": "https://hoge"
       }
     }
   }
